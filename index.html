@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepspace OSIS - Organisasi Siswa Intra Sekolah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #667eea;
+        }
+        
+        .star-animation {
+            animation: twinkle 2s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">🚀</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Deepspace OSIS</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="nav-link text-gray-700 font-medium">Beranda</a>
+                    <a href="#tentang" class="nav-link text-gray-700 font-medium">Tentang</a>
+                    <a href="#program" class="nav-link text-gray-700 font-medium">Program</a>
+                    <a href="#pengurus" class="nav-link text-gray-700 font-medium">Pengurus</a>
+                    <a href="#kontak" class="nav-link text-gray-700 font-medium">Kontak</a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#beranda" class="block px-3 py-2 text-gray-700">Beranda</a>
+                <a href="#tentang" class="block px-3 py-2 text-gray-700">Tentang</a>
+                <a href="#program" class="block px-3 py-2 text-gray-700">Program</a>
+                <a href="#pengurus" class="block px-3 py-2 text-gray-700">Pengurus</a>
+                <a href="#kontak" class="block px-3 py-2 text-gray-700">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="gradient-bg min-h-screen flex items-center justify-center pt-16">
+        <div class="text-center text-white px-4">
+            <div class="mb-8">
+                <div class="text-6xl mb-4">🌌</div>
+                <div class="flex justify-center space-x-2 mb-4">
+                    <span class="star-animation text-2xl">⭐</span>
+                    <span class="star-animation text-xl" style="animation-delay: 0.5s">✨</span>
+                    <span class="star-animation text-2xl" style="animation-delay: 1s">⭐</span>
+                </div>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Deepspace OSIS</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Menjelajahi Masa Depan Bersama - Organisasi Siswa yang Inovatif dan Inspiratif
+            </p>
+            <button onclick="scrollToSection('tentang')" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-gray-100 transition duration-300">
+                Jelajahi Lebih Lanjut 🚀
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Tentang Deepspace OSIS</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Kami adalah organisasi siswa yang berkomitmen untuk menciptakan lingkungan sekolah yang dinamis, kreatif, dan penuh inspirasi.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Visi</h3>
+                    <p class="text-gray-600">Menjadi organisasi siswa terdepan yang mengembangkan potensi siswa menuju masa depan yang gemilang.</p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Misi</h3>
+                    <p class="text-gray-600">Menyelenggarakan program inovatif yang mendorong kreativitas, kepemimpinan, dan prestasi siswa.</p>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Nilai</h3>
+                    <p class="text-gray-600">Integritas, inovasi, kolaborasi, dan dedikasi untuk kemajuan bersama seluruh siswa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="program" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Program Unggulan</h2>
+                <p class="text-xl text-gray-600">Berbagai kegiatan menarik yang kami selenggarakan untuk pengembangan siswa</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Festival Seni & Budaya</h3>
+                    <p class="text-gray-600 mb-4">Pameran karya seni, pertunjukan musik, dan kompetisi kreativitas siswa.</p>
+                    <span class="text-purple-600 font-semibold">Setiap Semester</span>
+                </div>
+                
+                <div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-4">🏆</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Olimpiade Akademik</h3>
+                    <p class="text-gray-600 mb-4">Kompetisi mata pelajaran untuk mengasah kemampuan akademik siswa.</p>
+                    <span class="text-purple-600 font-semibold">Tahunan</span>
+                </div>
+                
+                <div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-4">🌱</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Green School Initiative</h3>
+                    <p class="text-gray-600 mb-4">Program peduli lingkungan dan sustainability di lingkungan sekolah.</p>
+                    <span class="text-purple-600 font-semibold">Berkelanjutan</span>
+                </div>
+                
+                <div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Tech Innovation Fair</h3>
+                    <p class="text-gray-600 mb-4">Pameran teknologi dan inovasi karya siswa di bidang STEM.</p>
+                    <span class="text-purple-600 font-semibold">Tahunan</span>
+                </div>
+                
+                <div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Community Service</h3>
+                    <p class="text-gray-600 mb-4">Kegiatan bakti sosial dan pengabdian kepada masyarakat sekitar.</p>
+                    <span class="text-purple-600 font-semibold">Bulanan</span>
+                </div>
+                
+                <div class="card-hover bg-white p-6 rounded-xl shadow-md">
+                    <div class="text-3xl mb-4">🎭</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Leadership Camp</h3>
+                    <p class="text-gray-600 mb-4">Pelatihan kepemimpinan dan pengembangan soft skills siswa.</p>
+                    <span class="text-purple-600 font-semibold">Semester</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="pengurus" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Pengurus Deepspace OSIS</h2>
+                <p class="text-xl text-gray-600">Tim solid yang berdedikasi untuk kemajuan siswa</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover text-center">
+                    <div class="w-32 h-32 gradient-bg rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-white">
+                        👨‍🎓
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Ahmad Rizki</h3>
+                    <p class="text-purple-600 font-semibold mb-2">Ketua OSIS</p>
+                    <p class="text-gray-600 text-sm">Kelas XII IPA 1</p>
+                </div>
+                
+                <div class="card-hover text-center">
+                    <div class="w-32 h-32 gradient-bg rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-white">
+                        👩‍🎓
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Sari Indah</h3>
+                    <p class="text-purple-600 font-semibold mb-2">Wakil Ketua</p>
+                    <p class="text-gray-600 text-sm">Kelas XII IPS 2</p>
+                </div>
+                
+                <div class="card-hover text-center">
+                    <div class="w-32 h-32 gradient-bg rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-white">
+                        👨‍💼
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Budi Santoso</h3>
+                    <p class="text-purple-600 font-semibold mb-2">Sekretaris</p>
+                    <p class="text-gray-600 text-sm">Kelas XI IPA 3</p>
+                </div>
+                
+                <div class="card-hover text-center">
+                    <div class="w-32 h-32 gradient-bg rounded-full mx-auto mb-4 flex items-center justify-center text-4xl text-white">
+                        👩‍💼
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Maya Putri</h3>
+                    <p class="text-purple-600 font-semibold mb-2">Bendahara</p>
+                    <p class="text-gray-600 text-sm">Kelas XI IPS 1</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Hubungi Kami</h2>
+                <p class="text-xl text-white opacity-90">Punya ide atau ingin bergabung? Jangan ragu untuk menghubungi kami!</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                📍
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Alamat</h3>
+                                <p class="opacity-90">Ruang OSIS, Lantai 2, SMA Deepspace</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                📧
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Email</h3>
+                                <p class="opacity-90">deepspace.osis@sekolah.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                                📱
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Instagram</h3>
+                                <p class="opacity-90">@deepspace_osis</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Kirim Pesan</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Nama</label>
+                            <input type="text" id="nama" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Kelas</label>
+                            <input type="text" id="kelas" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Contoh: XII IPA 1" required>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Pesan</label>
+                            <textarea id="pesan" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Tulis pesan atau ide Anda..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-semibold hover:opacity-90 transition duration-300">
+                            Kirim Pesan 🚀
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <div class="w-10 h-10 gradient-bg rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">🚀</span>
+                    </div>
+                    <span class="text-2xl font-bold">Deepspace OSIS</span>
+                </div>
+                <p class="text-gray-400 mb-6">Menjelajahi Masa Depan Bersama</p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">YouTube</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">TikTok</a>
+                </div>
+                <p class="text-gray-500 text-sm">© 2024 Deepspace OSIS. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            const navHeight = 64; // Height of fixed navigation
+            const elementPosition = element.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: elementPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigation links smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nama = document.getElementById('nama').value;
+            const kelas = document.getElementById('kelas').value;
+            const pesan = document.getElementById('pesan').value;
+            
+            // Show success message
+            alert(`Terima kasih ${nama}! Pesan Anda telah diterima. Tim Deepspace OSIS akan segera menghubungi Anda.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98613c37c2b5c753',t:'MTc1OTA0MTQ3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
